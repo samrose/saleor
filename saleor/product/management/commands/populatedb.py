@@ -9,7 +9,7 @@ from utils.create_random_data import create_items
 class Command(BaseCommand):
     help = 'Populate database with test objects'
     BASE_DIR = r'saleor/static/placeholders/'
-    required_dirs = [join(BASE_DIR, 'shirts'), join(BASE_DIR, 'bags')]
+    required_dirs = [join(BASE_DIR, 'servers')]
 
     def handle(self, *args, **options):
         if not all(exists(path) for path in self.required_dirs):
