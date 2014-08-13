@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from mptt.admin import MPTTModelAdmin
 
-from .models import (ProductImage, Server)
+from .models import (ProductImage, Category, Server,FixedProductDiscount)
 from .forms import ServerAdminForm, ImageInline
 
 

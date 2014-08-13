@@ -11,7 +11,12 @@ class ServerForm(AddToCartForm):
 
     def get_variant(self, clean_data):
         return self
-
+class ServerAdminForm(forms.ModelForm):
+    class Meta:
+        model = Server
+        widgets = {
+                'collection': AutoCompleteWidget(CollectionLookup)
+        }
 class ProductVariantInline(forms.models.BaseInlineFormSet):
     error_no_items = pgettext_lazy('Product admin error', 'You have to create at least one variant')
     def clean(self):
