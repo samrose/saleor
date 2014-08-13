@@ -11,7 +11,7 @@ class ImageAdminInline(admin.StackedInline):
     formset = ImageInline
 
 class ServerAdmin(admin.ModelAdmin):
-    form = ShirtAdminForm
+    form = ServerAdminForm
     list_display = ['name', 'collection', 'admin_get_price_min',
                     'admin_get_price_max']
     inlines = [ImageAdminInline]
